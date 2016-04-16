@@ -37,5 +37,11 @@ public class MyObject implements Serializable{
 		this.name = name;
 		this.sex_isMale = sex_isMale;
 	}
-	
+	public MyObject() {
+		
+	}
+	public MyObject(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
 }
