@@ -31,5 +31,11 @@ public class MyObject implements Serializable{
 	public void setSex_isMale(boolean sex_isMale) {
 		this.sex_isMale = sex_isMale;
 	}
+	public MyObject(int id, String name, boolean sex_isMale) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sex_isMale = sex_isMale;
+	}
 	
 }
