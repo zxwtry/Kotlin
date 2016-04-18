@@ -26,9 +26,16 @@ public class TestSeller {
 			Seller newSeller = (Seller)msg.getObject();
 			System.out.println(newSeller.getPasswd());
 		} catch (JMSException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if (null != con) {
+				try {
+					con.stop();
+					con.close();
+				} catch (JMSException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-		
 	}
 }
